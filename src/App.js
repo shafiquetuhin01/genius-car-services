@@ -11,6 +11,8 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AddService from "./Pages/AddService/AddService";
+import Manage from "./Pages/Manage/Manage";
 
 function App() {
   return (
@@ -31,6 +33,22 @@ function App() {
           element={
             <RequireAuth>
               <Checkout></Checkout>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/addservice"
+          element={
+            <RequireAuth>
+              <AddService></AddService>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/manage"
+          element={
+            <RequireAuth>
+              <Manage></Manage>
             </RequireAuth>
           }
         ></Route>
